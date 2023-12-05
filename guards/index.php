@@ -2,7 +2,8 @@
 
 $auth = auth();
 $publicRoutes = [
-    'auth/login'
+    'auth/login',
+    'exam/test'
 ];
 
 if(empty($auth) && !in_array($route, $publicRoutes))
