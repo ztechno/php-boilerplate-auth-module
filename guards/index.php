@@ -1,10 +1,7 @@
 <?php
 
 $auth = auth();
-$publicRoutes = [
-    'auth/login',
-    'exam/test'
-];
+$publicRoutes = \Core\Request::getPublicRoutes();
 
 if(empty($auth) && !in_array($route, $publicRoutes))
 {
