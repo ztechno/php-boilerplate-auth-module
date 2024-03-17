@@ -12,6 +12,6 @@ if(empty($auth) && !in_array($route, $publicRoutes))
 if($auth && $route == 'auth/login')
 {
     $AUTH_AFTER_LOGIN_SUCCESS = env('APP_PATH', '') .'/'. env('AUTH_AFTER_LOGIN_SUCCESS','');
-    header("location: /". $AUTH_AFTER_LOGIN_SUCCESS);
+    header("location: ". $AUTH_AFTER_LOGIN_SUCCESS);
     die();
 }
