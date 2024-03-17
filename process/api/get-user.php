@@ -2,4 +2,4 @@
 
 use Core\Response;
 
-return Response::json(jwtAuth(), 'user retireved');
+return Response::json(auth(), 'user retireved');
