@@ -17,19 +17,16 @@ if(Request::isMethod('post'))
     if($user)
     {
         // jwt response
-        echo Response::json([
+        return Response::json([
             'token' => (new JwtAuth)->generate([
                 'user_id' => $user->id
             ])
         ], 'authentication success');
-        die();
     }
     else
     {
-        echo Response::json([], __('auth.message.login_fail'), 404);
-        die();
+        return Response::json([], __('auth.message.login_fail'), 404);
     }
 }
 
-echo Response::json([], 'this method is not allowed');
-die();
+return Response::json([], 'this method is not allowed');
