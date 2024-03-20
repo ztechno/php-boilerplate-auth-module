@@ -7,8 +7,11 @@ $allowedRouteWithoutGuard = [
     env('API_PREFIX','api') . '/auth/login'
 ];
 
-if(!JwtAuth::validateBearerToken() || (empty(jwtAuth()) && !in_array($route, $allowedRouteWithoutGuard)))
+if(!in_array($route, $allowedRouteWithoutGuard))
 {
-    echo Response::json([], 'Unauthorized', 401);
-    die();
+    if(!JwtAuth::validateBearerToken() || empty(jwtAuth()))
+    {
+        echo Response::json([], 'Unauthorized', 401);
+        die();
+    }
 }
