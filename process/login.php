@@ -35,7 +35,9 @@ if(Request::isMethod('post'))
 
 }
 
-return view('auth/views/login', compact(
+$view = env('APP_THEME') == 'sneat' ? 'auth/views/sneat-login' : 'auth/views/login';
+
+return view($view, compact(
     'success_msg',
     'error_msg',
     'old'
