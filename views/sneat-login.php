@@ -19,7 +19,7 @@
     <meta name="description" content="<?= getSetting('application_name') ?>" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="<?= env('APP_FAVICON') ?>" />
+    <link rel="icon" type="image/x-icon" href="<?= getFavicon() ?>" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
