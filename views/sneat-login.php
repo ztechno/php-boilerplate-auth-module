@@ -62,7 +62,7 @@
               <!-- Logo -->
               <div class="app-brand justify-content-center">
                 <a href="<?= routeTo('/') ?>" class="app-brand-link gap-2">
-                  <img src="<?= env('APP_SIDEBAR_LOGO') ?>" width="100%">
+                  <img src="<?= getLogo() ?>" width="100%">
                 </a>
               </div>
               <!-- /Logo -->
