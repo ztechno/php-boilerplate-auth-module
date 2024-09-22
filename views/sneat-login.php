@@ -78,6 +78,7 @@
                     id="email"
                     name="username"
                     placeholder="Enter your username"
+                    value="<?= $old && isset($old['username']) ? $old['username'] : ''?>"
                     autofocus />
                 </div>
                 <div class="mb-3 form-password-toggle">
