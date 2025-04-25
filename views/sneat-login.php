@@ -68,6 +68,14 @@
               <!-- /Logo -->
               <p class="mb-6 text-center">Silahkan login untuk melanjutkan</p>
 
+              <?php if($success_msg): ?>
+              <div class="alert alert-success"><?=$success_msg?></div>
+              <?php endif ?>
+
+              <?php if($error_msg): ?>
+              <div class="alert alert-danger"><?=$error_msg?></div>
+              <?php endif ?>
+
               <form id="formAuthentication" class="mb-6" method="POST">
               <?= csrf_field() ?>
                 <div class="mb-3">
